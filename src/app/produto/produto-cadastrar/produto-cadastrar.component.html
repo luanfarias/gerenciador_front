@@ -1,1 +1,35 @@
-<p>produto-cadastrar works!</p>
+<mat-card style="margin: 40px;">
+    <mat-card-header>
+        <div mat-card-avatar>
+            <mat-icon style="font-size: 40px;">add_box</mat-icon>
+        </div>
+        <mat-card-title>Cadastrar produto</mat-card-title>
+        <mat-card-subtitle>Novo produto</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="produtoForm" style="padding: 20px;">
+            <mat-form-field class="input" appearance="standard">
+                <mat-label>Código do produto</mat-label>
+                <input formControlName="codigo" matInput placeholder="Código de 13 ou 8 digitos">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field class="input" appearance="standard">
+                <mat-label>Nome do produto</mat-label>
+                <input formControlName="nome" matInput placeholder="Digite o produto, marca, tipo de embalagem e quantidade">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field class="input" appearance="standard">
+                <mat-label>Valor</mat-label>
+                <input formControlName="valor" matInput placeholder="Código de 13 ou 8 digitos">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions style="margin: 20px;">
+        <button mat-raised-button color="primary">Cadastrar</button>
+        <button mat-raised-button color="basic">Limpar</button>
+    </mat-card-actions>
+</mat-card>

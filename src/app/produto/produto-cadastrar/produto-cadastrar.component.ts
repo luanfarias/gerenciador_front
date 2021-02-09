@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-produto-cadastrar',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoCadastrarComponent implements OnInit {
 
-  constructor() { }
+  produtoForm!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.produtoForm = this.formBuilder.group({
+      codigo: [''],
+      nome: [''],
+      valor: ['']
+    })
   }
 
 }
