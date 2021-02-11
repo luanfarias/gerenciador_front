@@ -10,21 +10,27 @@
         <form [formGroup]="produtoForm" style="padding: 20px;">
             <mat-form-field class="input" appearance="standard">
                 <mat-label>Código do produto</mat-label>
-                <input formControlName="codigo" matInput placeholder="Código de 13 ou 8 digitos">
-                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <!-- <mat-hint>Hint</mat-hint> -->
+                <input required formControlName="codigo" matInput placeholder="Código de 13 ou 8 digitos">
+                <mat-hint 
+                    style="color: #f44336;" 
+                    *ngIf="produtoForm.get('codigo')?.status == 'INVALID' && produtoForm.get('codigo')?.touched">{{ validarCodigo() }}
+                </mat-hint>
             </mat-form-field>
             <mat-form-field class="input" appearance="standard">
                 <mat-label>Nome do produto</mat-label>
-                <input formControlName="nome" matInput placeholder="Digite o produto, marca, tipo de embalagem e quantidade">
-                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <!-- <mat-hint>Hint</mat-hint> -->
+                <input required formControlName="nome" matInput placeholder="Digite o produto, marca, tipo de embalagem e quantidade">
+                <mat-hint 
+                    style="color: #f44336;" 
+                    *ngIf="produtoForm.get('nome')?.status == 'INVALID' && produtoForm.get('nome')?.touched">{{ validarNome() }}
+                </mat-hint>
             </mat-form-field>
             <mat-form-field class="input" appearance="standard">
                 <mat-label>Valor</mat-label>
-                <input formControlName="valor" matInput placeholder="Código de 13 ou 8 digitos">
-                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <!-- <mat-hint>Hint</mat-hint> -->
+                <input type="number" required formControlName="valor" matInput placeholder="Digite o valor do produto">
+                <mat-hint 
+                style="color: #f44336;" 
+                *ngIf="produtoForm.get('valor')?.status == 'INVALID' && produtoForm.get('valor')?.touched">{{ validarValor() }}
+            </mat-hint>
             </mat-form-field>
         </form>
     </mat-card-content>
