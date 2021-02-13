@@ -26,7 +26,7 @@
             </mat-form-field>
             <mat-form-field class="input" appearance="standard">
                 <mat-label>Valor</mat-label>
-                <input type="number" required formControlName="valor" matInput placeholder="Digite o valor do produto">
+                <input type="text" mask="separator.2" separatorLimit="1000" thousandSeparator="." required formControlName="valor" matInput placeholder="Digite o valor do produto">
                 <mat-hint 
                 style="color: #f44336;" 
                 *ngIf="produtoForm.get('valor')?.status == 'INVALID' && produtoForm.get('valor')?.touched">{{ validarValor() }}
