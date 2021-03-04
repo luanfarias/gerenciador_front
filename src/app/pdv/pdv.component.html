@@ -1,1 +1,24 @@
-<p>pdv works!</p>
+<div fxLayout="row" fxLayoutAlign="space-evenly center" style="padding: 10px;">
+    <div style="width: 45%;">
+        <mat-card style="margin: 40px;">
+            <mat-card-content>
+              <form style="padding: 20px;">
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label>Código/Nome do produto</mat-label>
+                    <input required matInput placeholder="Digite o código ou o nome do produto">
+                </mat-form-field>
+                <div style="display: flex; justify-content: space-between;">
+                    <mat-form-field style="width: 45%;" appearance="outline">
+                        <mat-label>Quantidade</mat-label>
+                        <input required matInput placeholder="Digite a quantidade do produto">
+                    </mat-form-field>
+                    <mat-form-field style="width: 45%;" appearance="outline">
+                        <mat-label>Valor</mat-label>
+                        <input required matInput placeholder="R$">
+                    </mat-form-field>
+                </div>
+              </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+ </div>

@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MenuNavModule } from './menu-nav/menu-nav.module';
 import { ProdutoModule } from './produto/produto.module';
+import { PdvModule } from './pdv/pdv.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -20,7 +22,9 @@ import { ProdutoModule } from './produto/produto.module';
     BrowserAnimationsModule,
     MenuNavModule,
     ProdutoModule,
-    HttpClientModule
+    HttpClientModule,
+    PdvModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
